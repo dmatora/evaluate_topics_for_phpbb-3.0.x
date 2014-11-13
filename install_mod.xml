@@ -25,11 +25,11 @@ If one or more files of the included mod directory already exists in your phpBB3
 				<email><![CDATA[Rene@svrider.de]]></email>
 			</author>
 		</author-group>
-		<mod-version>1.0.8</mod-version>
+		<mod-version>1.0.9</mod-version>
 		<installation>
 			<level>intermediate</level>
 			<time>1380</time>
-			<target-version>3.0.7-PL1</target-version>
+			<target-version>3.0.12</target-version>
 		</installation>
 		<history>
 			<entry>
@@ -112,6 +112,13 @@ If one or more files of the included mod directory already exists in your phpBB3
 				<rev-version>1.0.8</rev-version>
 				<changelog lang="en">
 					<change><![CDATA[phpBB 3.0.7-PL1 compatibility check. No changes to code -> 1.0.7b is compatible to phpBB 3.0.6 too.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2014-11-13</date>
+				<rev-version>1.0.9</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[phpBB 3.0.12 compatibility fix]]></change>
 				</changelog>
 			</entry>
 		</history>
@@ -269,11 +276,7 @@ img_icon_evaluation_light = evaluation_light.gif*8*10]]></action>
 			</edit>
 			<edit>
 				<find><![CDATA[<!-- IF searchresults.S_TOPIC_REPORTED --><a href="{searchresults.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --><br />]]></find>
-				<inline-edit>
-					<inline-find><![CDATA[<br />]]></inline-find>
-					<inline-action type="replace-with"><![CDATA[</span>]]></inline-action>
-				</inline-edit>
-				<action type="after-add"><![CDATA[<span class="right-box"><!-- IF searchresults.EVALUATION_IMG -->{searchresults.EVALUATION_IMG}<!-- ENDIF --></span>
+				<action type="replace-with"><![CDATA[<!-- IF searchresults.S_TOPIC_REPORTED --><a href="{searchresults.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --></span><span class="right-box"><!-- IF searchresults.EVALUATION_IMG -->{searchresults.EVALUATION_IMG}<!-- ENDIF --></span>
 <br clear="all"/>]]></action>
 			</edit>
 			<edit>
@@ -294,11 +297,7 @@ img_icon_evaluation_light = evaluation_light.gif*8*10]]></action>
 			</edit>
 			<edit>
 				<find><![CDATA[<!-- IF topicrow.S_TOPIC_REPORTED --><a href="{topicrow.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --><br />]]></find>
-				<inline-edit>
-					<inline-find><![CDATA[<br />]]></inline-find>
-					<inline-action type="replace-with"><![CDATA[</span>]]></inline-action>
-				</inline-edit>
-				<action type="after-add"><![CDATA[<span class="right-box"><!-- IF topicrow.EVALUATION_IMG -->{topicrow.EVALUATION_IMG}<!-- ENDIF --></span>
+				<action type="replace-with"><![CDATA[<!-- IF topicrow.S_TOPIC_REPORTED --><a href="{topicrow.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --></span><span class="right-box"><!-- IF topicrow.EVALUATION_IMG -->{topicrow.EVALUATION_IMG}<!-- ENDIF --></span>
 	<br clear="all" />]]></action>
 			</edit>
 		</open>
